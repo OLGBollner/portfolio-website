@@ -25,7 +25,7 @@ class MdTests(unittest.TestCase):
         epot, ekin, temp, etot = calcenergy(atoms)
 
         self.assertTrue( abs(ekin) < 0.5 )
-        self.assertTrue( temp < 310 and temp > 290)
+        self.assertTrue( 290 < temp < 310)
 
 if __name__ == "__main__":
     tests = [unittest.TestLoader().loadTestsFromTestCase(MdTests)]
